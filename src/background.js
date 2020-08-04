@@ -39,11 +39,6 @@ document.getElementById('input').addEventListener("submit", function(e){
     });
     
 
- 
-
-
-    
-        
 });
   
 

@@ -2,6 +2,12 @@
     "name" : "YouTalk",
     "version" : "1.0",
     "description": "Talk to a YouTube video! Find the time where you hear the exact sentence in the video.",
+    "icons": {
+        "16": "YouTalk_16.png",
+        "48": "YouTalk_48.png",
+        "128": "YouTalk_128.png"
+
+    },
     "browser_action": {
         "default_popup": "popup.html"
     },
