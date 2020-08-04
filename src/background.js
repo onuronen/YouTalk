@@ -25,11 +25,11 @@ document.getElementById('input').addEventListener("submit", function(e){
     if (!video_id) {
         return;
     }
-    
+
     console.log(video_id);
 
-    fetch(url, {
-        method: 'GET',
+    fetch(url + "index", {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'video_id' : video_id,

@@ -11,6 +11,10 @@ def make_app():
     CORS(app)
 
     @app.route('/')
+    def check_server():
+        return "Server running"
+    
+    @app.route('/index', methods = ["POST"])
     def index():
         video_id = request.headers.get('video_id')
         input_sentence = request.headers.get('input_sentence')
