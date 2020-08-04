@@ -1,4 +1,4 @@
-url = "http://localhost:5000"
+url = "https://youtalkapp.herokuapp.com/"
 
 document.getElementById('input').addEventListener("submit", function(e){
     e.preventDefault();
@@ -21,9 +21,14 @@ document.getElementById('input').addEventListener("submit", function(e){
     }
 
     var video_id = extract_video_id[1];
+
+    if (!video_id) {
+        return;
+    }
+    
     console.log(video_id);
 
-    fetch(url + "/", {
+    fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
