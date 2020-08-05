@@ -17,10 +17,10 @@ def detect_words(video_id, sentence):
         entry["text"] = entry["text"].lower()
         
         #find the remaining seconds
-        seconds = entry["start"] % 60
+        seconds = int(entry["start"] % 60)
 
         #find the minutes
-        minutes = entry["start"] / 60
+        minutes = int(entry["start"] / 60)
 
         time = (minutes,seconds)
         #searching if the user inputted words exactly appears in the subtitles
