@@ -16,20 +16,21 @@ def detect_words(video_id, sentence):
     for entry in subtitles:
         entry["text"] = entry["text"].lower()
         
-        # convert to minute format
-        entry["start"] = entry["start"] / 60
+        #find the remaining seconds
+        seconds = entry["start"] % 60
 
-        # 2 decimal points is enough for our purpose
-        entry["start"] = round(entry["start"], 2)
+        #find the minutes
+        minutes = entry["start"] / 60
 
+        time = (minutes,seconds)
         #searching if the user inputted words exactly appears in the subtitles
         if sentence in entry["text"]:
-            first_priority_results.append(entry["start"])
+            first_priority_results.append(time)
             
         #for the case if there is no exact match, then use string comparison, append results to 
         #list over certain threshold
         elif fuzz.ratio(sentence, entry["text"]) > 70:
-            second_priority_results.append(entry["start"])
+            second_priority_results.append(time)
 
 
     result = []
@@ -55,5 +56,5 @@ def detect_words(video_id, sentence):
     else:
         # takes top 3, if there are less number of elements, the list only contains them
         result = result[:3]
-        result = ", ".join([str(i) for i in result])
+        result = ", ".join([str(i[0]) + ":" + str(i[1]) for i in result])
         return "Here are the time(s)! " + result
