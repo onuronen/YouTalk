@@ -1,7 +1,16 @@
+body {
+    width: 150;
+    height: 290;
+}
+
 #logo {
-    margin-left: 15%;
+    margin-left: 13%;
+}
+
+#youtube_text {
+    text-align: center;
 }
 
 #final_submit_button {
-    margin-left: 27%;
+    margin-left: 30%;
 }
