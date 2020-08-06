@@ -56,5 +56,19 @@ def detect_words(video_id, sentence):
     else:
         # takes top 3, if there are less number of elements, the list only contains them
         result = result[:3]
-        result = ", ".join([str(i[0]) + ":" + str(i[1]) for i in result])
+
+        # change seconds that are single digit. We will make 6 -> 06, for example.
+        seconds_list = []
+        for i in result:
+            if i[1] < 10:
+                seconds_list.append(str(i[1]).zfill(2))
+            else:
+                seconds_list.append(str(i[1]))
+        
+
+        for i in range(len(result)):
+            result[i] = str(result[i][0]) + ":" + seconds_list[i]
+
+        result = ", ".join([i for i in result])
+
         return "Here are the time(s)! " + result
