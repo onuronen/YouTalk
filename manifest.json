@@ -1,6 +1,6 @@
 {
     "name" : "YouTalk",
-    "version" : "1.0",
+    "version" : "1.1",
     "description": "Talk to a YouTube video! Find the time where you hear the exact sentence in the video.",
     "icons": {
         "16": "images/YouTalk_16.png",

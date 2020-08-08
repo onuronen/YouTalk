@@ -3,6 +3,9 @@ url = "https://youtalkapp.herokuapp.com/"
 document.getElementById('input').addEventListener("submit", function(e){
     e.preventDefault();
 
+    var result = "Loading...";
+    document.querySelector("#display_time").innerHTML = result
+
     var link = document.getElementById("video_link").value;
     var sentence = document.getElementById("words").value;
      
@@ -37,9 +40,8 @@ document.getElementById('input').addEventListener("submit", function(e){
         }
     }).then(response => response.json())
       .then(data => {
-         
-        var result = "";
-        result += data;
+  
+        result = data;
         document.querySelector("#display_time").innerHTML = result
     });
     

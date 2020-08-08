@@ -1,17 +1,23 @@
 <html>
     <head>
         <title>YouTalk popup </title>
+        <link rel="stylesheet" href="src/style.css"/>
+        
     </head>
 
     <body>
         <img id="logo" src="images/YouTalk_logo_180.png" alt="YouTalk_logo" ><br/><br/>
         <form id="input">
-            Youtube video link:<br/>
-            <input type="text" placeholder="Enter the video link..." id="video_link"><br/><br/>
 
-            Enter the words or sentence you want to find:
-            <input type="text" placeholder="Enter the words..." id="words"><br/><br/>
-            <input type="submit" id="final_submit_button">
+            <div id="youtube_text">
+                Youtube video link:<br/>
+                <input type="text" placeholder="Enter the video link..." id="video_link"><br/><br/>
+                Enter the words or sentence you want to find:
+                <input type="text" placeholder="Enter the words..." id="words"><br/><br/>
+            </div>
+               
+            <input type="submit" id="final_submit_button"><br/>
+
         </form>
 
         <div id="display_time">
