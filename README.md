@@ -7,3 +7,5 @@ told by the person in the video and want to jump to that exact point. However, I
 Even if the video has content sections, searching for a specific sentence in a 10 minute interval is still very annoying!
 
 YouTalk enhances the quality of user-video interaction and allows you to find the excerpt you are looking for within seconds!
+
+Link: https://chrome.google.com/webstore/detail/youtalk/cbcgobnahninfhjjjhpdenekldlpbajh
